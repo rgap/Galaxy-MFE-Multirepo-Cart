@@ -1,7 +1,7 @@
 import React from 'react';
 import CartItem from '../components/CartItem';
 import CartSummary from '../components/CartSummary';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../hooks/useCart';
 
 const CartPage = () => {
   const { items } = useCart();

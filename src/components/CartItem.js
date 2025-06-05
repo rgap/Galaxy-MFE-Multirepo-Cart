@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../hooks/useCart';
 
 const CartItem = ({ item }) => {
   const { updateQuantity, removeItem } = useCart();

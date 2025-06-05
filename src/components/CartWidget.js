@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../hooks/useCart';
 import CartItem from './CartItem';
 import CartSummary from './CartSummary';
 
