@@ -22,6 +22,10 @@ module.exports = {
     'react-router-dom': {
       singleton: true,
       requiredVersion: dependencies['react-router-dom'],
+    },
+    'common-components-react': {
+      singleton: true,
+      requiredVersion: dependencies['common-components-react'],
     }
   },
 }; 

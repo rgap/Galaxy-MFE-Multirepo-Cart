@@ -1,3 +1,4 @@
+import { Button } from 'common-components-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
@@ -49,22 +50,14 @@ const CartSummary = () => {
         </div>
       </div>
       
-      <button
+      <Button
+        variant="success"
         onClick={() => navigate('/checkout')}
         disabled={items.length === 0}
-        style={{
-          width: '100%',
-          padding: '0.75rem',
-          backgroundColor: items.length === 0 ? '#ccc' : '#28a745',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: items.length === 0 ? 'not-allowed' : 'pointer',
-          fontSize: '0.9rem'
-        }}
+        fullWidth
       >
         Proceed to Checkout
-      </button>
+      </Button>
     </div>
   );
 };
