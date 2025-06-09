@@ -23,7 +23,7 @@ const CartItem = ({ item }) => {
         <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.name}</h4>
         <Button
           variant="danger"
-          size="small"
+          size="medium"
           onClick={() => removeItem(item.id)}
         >
           ✕
@@ -44,7 +44,7 @@ const CartItem = ({ item }) => {
         }}>
           <Button
             variant="outline"
-            size="small"
+            size="medium"
             onClick={() => updateQuantity(item.id, item.quantity - 1)}
           >
             -
@@ -54,7 +54,7 @@ const CartItem = ({ item }) => {
           
           <Button
             variant="outline"
-            size="small"
+            size="medium"
             onClick={() => updateQuantity(item.id, item.quantity + 1)}
           >
             +
