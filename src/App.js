@@ -1,7 +1,8 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
-import CartPage from './pages/CartPage';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./index.css";
+import CartPage from "./pages/CartPage";
+import { CartProvider } from "./providers";
 
 const App = () => {
   return (
@@ -13,4 +14,4 @@ const App = () => {
   );
 };
 
-export default App; 
+export default App;

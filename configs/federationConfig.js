@@ -5,9 +5,9 @@ module.exports = {
   filename: "remoteEntry.js",
   exposes: {
     "./App": "./src/App",
-    "./CartContext": "./src/context/CartContext",
+    "./CartContext": "./src/providers/CartProvider",
     "./CartWidget": "./src/components/CartWidget",
-    "./useCart": "./src/hooks/useCart",
+    "./useCart": "./src/exports/useCart",
   },
   shared: {
     ...dependencies,

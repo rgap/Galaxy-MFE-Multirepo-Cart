@@ -1,38 +1,32 @@
-import React from 'react';
-import CartItem from '../components/CartItem';
-import CartSummary from '../components/CartSummary';
-import { useCart } from '../hooks/useCart';
+import React from "react";
+import { CartItem, CartSummary } from "../components";
+import "../index.css";
+import { useCart } from "../providers";
 
 const CartPage = () => {
   const { items } = useCart();
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1>Shopping Cart</h1>
-      
+    <div className="container">
+      <div className="cart-header">
+        <h1 className="cart-title">Shopping Cart</h1>
+        {items.length > 0 && <p className="cart-subtitle">Review your items and proceed to checkout</p>}
+      </div>
+
       {items.length === 0 ? (
-        <div style={{
-          textAlign: 'center',
-          padding: '2rem',
-          backgroundColor: '#f8f9fa',
-          borderRadius: '4px'
-        }}>
-          <h2>Your cart is empty</h2>
-          <p>Add some items to your cart to see them here.</p>
+        <div className="empty-cart">
+          <div className="empty-cart-icon">🛒</div>
+          <h2 className="empty-cart-title">Your cart is empty</h2>
+          <p className="empty-cart-message">Add some items to your cart to see them here.</p>
         </div>
       ) : (
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 300px',
-          gap: '2rem',
-          alignItems: 'start'
-        }}>
-          <div>
+        <div className="cart-layout">
+          <div className="card">
             {items.map(item => (
               <CartItem key={item.id} item={item} />
             ))}
           </div>
-          
+
           <div>
             <CartSummary />
           </div>
@@ -42,4 +36,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage; 
+export default CartPage;
