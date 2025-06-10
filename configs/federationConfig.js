@@ -1,31 +1,31 @@
-const { dependencies } = require('../package.json');
+const { dependencies } = require("../package.json");
 
 module.exports = {
-  name: 'cart',
-  filename: 'remoteEntry.js',
+  name: "cart",
+  filename: "remoteEntry.js",
   exposes: {
-    './App': './src/App',
-    './CartContext': './src/context/CartContext',
-    './CartWidget': './src/components/CartWidget',
-    './useCart': './src/hooks/useCart'
+    "./App": "./src/App",
+    "./CartContext": "./src/context/CartContext",
+    "./CartWidget": "./src/components/CartWidget",
+    "./useCart": "./src/hooks/useCart",
   },
   shared: {
     ...dependencies,
     react: {
       singleton: true,
-      requiredVersion: dependencies['react'],
+      requiredVersion: dependencies["react"],
     },
-    'react-dom': {
+    "react-dom": {
       singleton: true,
-      requiredVersion: dependencies['react-dom'],
+      requiredVersion: dependencies["react-dom"],
     },
-    'react-router-dom': {
+    "react-router-dom": {
       singleton: true,
-      requiredVersion: dependencies['react-router-dom'],
+      requiredVersion: dependencies["react-router-dom"],
     },
-    'common-components-react': {
+    "mfe-common-components": {
       singleton: true,
-      requiredVersion: dependencies['common-components-react'],
-    }
+      requiredVersion: dependencies["mfe-common-components"],
+    },
   },
-}; 
+};
